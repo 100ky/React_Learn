@@ -25,3 +25,12 @@ button {
 button:hover {
   background-color: #cc0000;
 }
+
+body {
+  background-color: aqua;
+  color: #ddd;
+}
+
+.all-tasks {
+  margin-top: 50px;
+}
