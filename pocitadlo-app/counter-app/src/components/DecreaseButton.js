@@ -1,8 +1,8 @@
+import "./DecreaseButton.css"
 
-
-const DecreaseButton = () => {
+const DecreaseButton = (props) => {
     return (
-        <button>Snížit o jeden</button>
+        <button onClick={props.xxx}>Snížit o jeden</button>
     )
 }
 
