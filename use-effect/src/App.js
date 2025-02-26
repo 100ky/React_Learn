@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import index from './index.css'
 
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
 
   return (  
     <div>
-      <h1> Hoňič!! </h1>
+      <h1> BAF!! </h1>
       <p> {value} </p>
       {console.log('Já jsem return')}
       <button className='btn' onClick={() => setValue(value + 1)}>Zvýšit</button>
