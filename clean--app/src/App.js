@@ -10,9 +10,13 @@ const App = () => {
   }
 
   useEffect(() => {
+    console.log('Já jsem useEffect');
     window.addEventListener('resize', sizeControl);
-    return () => window.removeEventListener('resize', sizeControl);
-  }, []);
+    return () => {
+      console.log('Já jsem cleanup');
+      window.removeEventListener('resize', sizeControl);
+    }
+  });
   
   useEffect(() => {
     if (darkMode) {
