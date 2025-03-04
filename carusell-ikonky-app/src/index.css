@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to right, #141e30, #243b55);
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.age-rating {
+  font-size: 1rem;
+  background-color: #e76f51;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.tags {
+  color: #a8dadc;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
