@@ -6,6 +6,22 @@ import data from "../data";
 const OneMovieSlider = () => {
     const [index, setIndex] = useState(0);
 
+    useEffect(() => {
+        if (index < 0) {
+            setIndex(data.length - 1);
+        }
+        if (index > data.length - 1) {
+            setIndex(0);
+        }
+    }, [index]);
+
+
+    useEffect(() => { 
+        let setIntervalId = setInterval(() => {
+            setIndex(index + 1);
+            }, 3000);
+            return () => clearInterval(setIntervalId);
+        }, [index]);
 
     return (
         <section className="All-movies">
@@ -31,8 +47,13 @@ const OneMovieSlider = () => {
                     </article>
                 })}
             </div>
-            <button className="prev-btn"> <FaArrowAltCircleLeft /> </button>
-            <button className="next-btn"> <FaArrowAltCircleRight /> </button>
+            <button onClick={() => setIndex(index - 1)} className="prev-btn">
+                <FaArrowAltCircleLeft />
+            </button>
+
+            <button onClick={() => setIndex(index + 1)} className="next-btn">
+                <FaArrowAltCircleRight />
+            </button>
 
 
         </section>
